@@ -5,7 +5,7 @@
         title="Component Name"
         :code="Code1"
     >
-      <Card/>
+
     </CardBaseCodeCards>
 
     <CardBaseCodeCards
