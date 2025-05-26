@@ -6,7 +6,7 @@
         <h4 class="text-xl mb-2">Infos</h4>
         <div class="flex flex-col items-center bg-white/10 rounded border border-[#6DA48F] shadow-inner shadow-white/10 p-4 flex-1">
           <NuxtLink to="/">
-            <img class="w-24 h-24" src="/favicon.ico" alt="Logo" />
+            <img class="w-24 h-24 rounded-2xl" src="/logo-test-removebg-preview.png" alt="Logo" />
           </NuxtLink>
           <p class="text-lg leading-loose">
             R.Delory<br />

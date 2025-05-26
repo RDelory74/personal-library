@@ -83,7 +83,7 @@ export default router -->
   }
   
   .app-container {
-    min-height: 100vh;
+
     padding: 20px;
   }
   

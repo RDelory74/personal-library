@@ -107,8 +107,7 @@ export default {
     width: 100%;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 2px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.1),
         0 0 0 1px rgba(255, 255, 255, 0.274);
     padding: 30px;
     box-sizing: border-box;

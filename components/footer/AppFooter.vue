@@ -5,7 +5,7 @@
         <h4>Coordonnées</h4>
         <div class="footer-info-container">
           <NuxtLink to="/">
-            <img class="logo" src="/favicon.ico" alt="Logo" />
+            <img class="logo" src="/logo-sharpped.png" alt="Logo" />
           </NuxtLink>
           <p>
             R.Delory<br />

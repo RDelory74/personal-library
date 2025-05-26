@@ -35,9 +35,9 @@
     position: absolute;
     top: -.75rem;
     left: 1.25rem;
-    font-size: var(--small-font-size);
+    font-size: small;
     padding: .25rem;
-    background-color: var(--body-color);
+    background-color: black;
     z-index: 10;
 }
 .contact__form-div {
@@ -52,9 +52,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid var(--text-color-light);
+    border: 2px solid grey;
     background: none;
-    color: var(--text-color);
+    color: #6DA48F;
     outline: none;
     padding: 1.5rem;
     border-radius: .75rem;

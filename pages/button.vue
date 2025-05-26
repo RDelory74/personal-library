@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-// Exemples de code - remplacez par le vrai code de vos composants
+
 const buttonTlwdCode = `<template>
   <NuxtLink
       class="inline-block rounded px-8 py-4 shadow-md font-bold text-lg no-underline transition-transform duration-300"
