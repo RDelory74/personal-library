@@ -16,10 +16,17 @@
     </CardBaseCodeCards>
 
     <CardBaseCodeCards
-        title="Base Header Tailwind wth burger"
+        title="Base Header Css "
         :code="Code3"
     >
       <HeaderAppHeader/>
+    </CardBaseCodeCards>
+
+    <CardBaseCodeCards
+        title="Call to Action Bar over Header "
+        :code="Code4"
+    >
+      <HeaderBaseCtaOverHeader/>
     </CardBaseCodeCards>
 
   </div>
@@ -28,6 +35,7 @@
 <script setup>
 
 import BaseContactStyleLite from "~/components/contact-form/BaseContactStyleLite.vue";
+import AppHeader from "~/components/header/AppHeader.vue";
 
 const Code1 = `<template>
     <div class="app-container">
@@ -262,35 +270,233 @@ const navLinks = [
 `
 
 const Code3 = `<template>
-  <div>
-    <a
-        :href="cvPath"
-        download
-        class="inline-block bg-orange-500 hover:bg-red-500 text-white no-underline px-5 py-2.5 rounded text-base transition-colors duration-300 ease-in-out"
-    >
-      Télécharger mon CV
-    </a>
+ <header>
+    <div class="nav-display">
+      <NuxtLink to="/">
+        <img
+            class="logo"
+            src="@/public/logo-sharpped.png"
+            alt="Logo"
+        />
+      </NuxtLink>
+      <div class="nav-button">
+        <BaseButtonTlwd class="nav-specific-button" label="Accueil" bgColor="#FEF0C1" hoverColor="#A0BDAF" to="/"/>
+        <BaseButtonTlwd class="nav-specific-button" label="Services" bgColor="#FEF0C1" hoverColor="#A0BDAF" to="/service"/>
+        <BaseButtonTlwd class="nav-specific-button" label="Contact" bgColor="#FEF0C1" hoverColor="#A0BDAF" to="/contact"/>
+      </div>
+    </div>
+  </header>
+</template>
+
+<script setup>
+import BaseButtonTlwd from "~/components/button/BaseButtonTlwd.vue";
+<\/script>
+<style scoped>
+header {
+  background-color: #6DA48F80;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+}
+
+.logo {
+  height: 5rem;
+}
+
+.nav-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.nav-button {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-right: 2rem;
+}
+
+.nav-specific-button:hover {
+  background-color: #D2B48C !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 850px) {
+  .nav-display {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nav-specific-button {
+    margin-right: 0;
+    padding: 0.7rem 1rem !important;
+  }
+
+  .nav-button {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 440px) {
+.nav-button {
+    gap: 0.5rem;
+  }
+}
+</style>`
+
+const Code4 = `<template>
+  <div class="header-cta-band">
+    <div class="header-cta-band-contact">
+      <div class="header-cta-band-contact-mail">
+        <Send
+            color="#ff4444"
+            :size="20"
+        />
+        <a href="mailto:rodolphe.delory74@hotmail.com">rodolphe.delory74@hotmail.com</a>
+      </div>
+      <div class="header-cta-band-contact-phone">
+        <PhoneOutgoing
+            color="#ff4444"
+            :size="20"
+        />
+        <a href="tel:0661392013">Tel: 06 61 39 20 13</a>
+      </div>
+      <div class="header-cta-band-contact-locator">
+        <Map
+            color="#ff4444"
+            :size="20"
+        />
+        <p>Haute Savoie | Savoie | Ain | Geneve</p>
+      </div>
+    </div>
+    <div class="header-cta-band-button-container">
+      <NuxtLink to="/contact" class="header-cta-band-button">
+        <NotebookPen />
+        Un Projet ?
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
 <script setup>
-const props = defineProps({
-  cvPath: {
-    type: String,
-    default: "/cv.pdf",
-  },
-});
-<\/script>`
-
-const Code4 = `<template>
-
-</template>
-
-<script setup>
+import {Send} from 'lucide-vue-next'
+import {PhoneOutgoing} from 'lucide-vue-next'
+import {NotebookPen} from 'lucide-vue-next'
+import {Map} from 'lucide-vue-next';
 
 <\/script>
 <style scoped>
 
+.header-cta-band {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0 5%;
+  font-family: 'Inter', sans-serif;
+  color: #D2B48C;
+  background-color: #24424A;
+  height: 50px;
+}
+
+.header-cta-band-contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  padding: 0 10px;
+  font-family: 'Inter', sans-serif;
+  color: #D2B48C;
+}
+
+.header-cta-band-contact-mail {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  padding: 0 10px;
+  font-family: 'Inter', sans-serif;
+  color: #D2B48C;
+}
+.header-cta-band-contact-mail a,
+.header-cta-band-contact-phone a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header-cta-band-contact-phone {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  padding: 0 10px;
+  font-family: 'Inter', sans-serif;
+  color: #D2B48C;
+}
+.header-cta-band-contact-locator{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  padding: 0 10px;
+  font-family: 'Inter', sans-serif;
+  color: #D2B48C;
+}
+
+.header-cta-band-button-container {
+  padding: 0;
+}
+
+.header-cta-band-button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  text-decoration: none;
+  border: none;
+  background: #ff4444;
+  color: #FEF0C1;
+  cursor: pointer;
+  transition: transform 0.5s ease, background-color 0.3s ease;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 2px;
+}
+
+
+.header-cta-band-button:hover {
+  background: #ff6666;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .header-cta-band-contact {
+    font-size: 12px;
+    gap: 10px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1110px) {
+  .header-cta-band-contact-mail {
+    display: none;
+  }
+  .header-cta-band-button {
+   padding: 5px 10px;
+ }
+}
+
+@media (max-width: 800px) {
+  .header-cta-band-contact-locator {
+    display: none;
+  }
+}
 
 </style>`
 </script>
