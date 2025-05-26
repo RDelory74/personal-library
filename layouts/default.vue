@@ -1,5 +1,5 @@
 <template>
- <HeaderBaseNavBurger/>
+ <HeaderBaseNavBurgerTwdNuxt/>
       <slot/>
-    <FooterAppFooter/>
-  </template>
+    <FooterAppFooterTwdNuxt/>
+</template>

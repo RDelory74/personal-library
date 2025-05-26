@@ -8,23 +8,23 @@
             <img class="logo" src="/favicon.ico" alt="Logo" />
           </NuxtLink>
           <p>
-            OJ Débarras<br />
+            R.Delory<br />
             Annecy<br />
           </p>
           <div class="footer-info-contact">
-            <a href="tel:0623881877">Tel: 06 23 88 18 77</a>
-            <a href="mailto:o-jdebarras@hotmail.fr">o-jdebarras@hotmail.fr</a>
+            <a href="tel:0661392013">Tel: 06 61 9 20 13</a>
+            <a href="mailto:rodolphe.delory74@hotmail.com">rodolphe.delory74@hotmail.com</a>
           </div>
         </div>
       </div>
       <div>
-        <h4>On vous rappelle</h4>
+        <h4>Contact Rapide</h4>
         <div>
-          <ContactFormLite />
+          <ContactFormBaseContactFormLite/>
         </div>
       </div>
       <div>
-        <h4>Lieux Intervention</h4>
+        <h4>Situation</h4>
         <div class="localite-container">
           <p>
             Savoie <br />
@@ -35,19 +35,18 @@
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79466.86673854114!2d6.125715272665547!3d45.88285895235016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b8ffa1c0551c9%3A0x42781681620534ba!2sAnnecy!5e1!3m2!1sfr!2sfr!4v1747913175002!5m2!1sfr!2sfr"
               width="300" height="250" style="border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 4px;"
-              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
     </div>
     <div class="footer-signature">
-      <BaseButton class="footer-specific-button" label="Devis-Gratuit" bgColor="#FEF0C1" to="/contact" />
       <div class="footer-signature-container">
-        <p>&copy; 2025 OJ Débarras – Tous droits réservés</p>
+        <p>&copy; 2025 R.Delory Library </p>
         <p>Réalisation :
           <a href="https://cv-rod-fr.vercel.app/" target="_blank" rel="noopener noreferrer">R.Delory </a>
-          <span class="separator">|</span>
-          <a href="https://www.linkedin.com/in/eric-oriez/" target="_blank" rel="noopener noreferrer"> E.Oriez</a>
         </p>
       </div>
     </div>
@@ -57,16 +56,26 @@
 
 
 <style scoped>
+/*general behavior*/
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem 1rem 0 1rem;
+}
+h4 {
+  font-family: 'Inter', sans-serif;
+}
+
+p {
+  font-size: 24px;
+  line-height: 2;
+}
+
+
 .logo {
   width: 100px;
   height: 100px;
-}
-
-footer {
-  background-color: #6DA48F80;
-  color: #25424C;
-  text-align: center;
-  padding: 1rem 1rem 0 1rem;
 }
 
 .footer-info {
@@ -83,6 +92,10 @@ footer {
 }
 
 .footer-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 2px;
   border: 1px solid #6DA48F;
@@ -95,17 +108,20 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 2px;
   border: 1px solid #6DA48F;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1),
     0 0 0 1px rgba(255, 255, 255, 0.274);
 }
+.footer-map-locator {
+  margin-bottom: 10px;
+}
 
 .localite-container>p {
   margin: 0;
   font-size: 14px;
-  font-weight: bold;
 
 }
 
@@ -119,21 +135,10 @@ footer {
 .footer-info-contact>a {
   color: inherit;
   text-decoration: none;
-  font-weight: bold;
 }
 
-h4 {
-  font-family: 'Alkatra', sans-serif;
-}
 
-p {
-  font-size: 24px;
-  line-height: 2;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-
+/*signature*/
 .footer-signature {
   display: flex;
   flex-direction: column;
@@ -143,9 +148,7 @@ p {
   color: white;
 }
 
-.footer-info p:first-of-type {
-  font-weight: bold;
-}
+
 
 .footer-signature-container {
   display: flex;
@@ -168,24 +171,9 @@ p {
 }
 
 
-.footer-signature-container .separator {
-  margin: 0 5px;
-  color: #999;
-}
-
 .footer-signature-container>p {
   font-size: 14px;
   margin: 0;
-}
-
-.footer-specific-button {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.footer-specific-button:hover {
-  background-color: #D2B48C !important;
-  opacity: 1 !important;
 }
 
 @media (max-width: 1024px) {
@@ -214,9 +202,6 @@ p {
     text-align: center;
   }
 
-  .footer-specific-button {
-    padding: 0.7rem 1rem !important;
-  }
 }
 
 @media (max-width: 550px) {
@@ -233,5 +218,3 @@ p {
   }
 }
 </style>
-<script setup lang="ts">
-</script>

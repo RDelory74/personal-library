@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* 1. Définir la police par défaut sur tout le site */
+body {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background-color: black; /* Optionnel selon ton style global */
+}
+
+/* 2. Enlever les décorations sur tous les liens */
+a,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: white;
+}
+
+/* 3. S'assurer que NuxtLink hérite du style des <a> */
+.nuxt-link,
+.nuxt-link-exact-active {
+    text-decoration: none;
+    color: white;
+}
+.nuxt-link:hover{
+    color:#6DA48F;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-weight: bold;
+}
