@@ -58,9 +58,5 @@ const navLinks = [
 ];
 </script>
 
-<style scoped>
-.nuxt-link:hover {
-  color: #6DA48F !important;
-}
-</style>
+
 
