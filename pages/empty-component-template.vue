@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-1 p-3 my-10 w-auto">
+  <div class="flex flex-col gap-2 p-3 my-10 md:mx-50 w-auto">
 
     <CardBaseCodeCards
         title="Component Name"

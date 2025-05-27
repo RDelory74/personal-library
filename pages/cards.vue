@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-1 p-3 my-10 w-auto">
+  <div class="flex flex-col gap-2 p-3 my-10 lg:mx-50 w-auto">
 
     <CardBaseCodeCards
         title="Base Cards tailwind"
@@ -26,7 +26,7 @@
         title="Component Name"
         :code="Code4"
     >
-   <!--insert component here-->
+   <CardBaseStaticCardCode/>
     </CardBaseCodeCards>
 
   </div>
@@ -165,11 +165,35 @@ const showCode = ref(false)
 </style>`
 
 const Code4 = `<template>
+<div
+      class="flex flex-col md:flex-row items-center justify-between gap-6 p-6 bg-white/5 border border-[#6DA48F] rounded-lg shadow-inner shadow-white/10"
+      :class="reverse ? 'md:flex-row-reverse' : 'md:flex-row'"
+  >
+    <!-- Texte -->
+    <div class="w-full md:w-1/2">
+      <h3 class="text-2xl font-semibold mb-4 text-white">{{ title }}</h3>
+      <p class="text-white/90 leading-relaxed">{{ text }}</p>
+    </div>
 
+    <!-- Zone de code -->
+    <div
+        class="w-full md:w-1/2 max-h-[300px] overflow-auto bg-black text-green-400 font-mono text-sm p-4 rounded-lg border border-white/20"
+    >
+      <pre><code>{{ code }}</code></pre>
+    </div>
+  </div>
 </template>
 
 <script setup>
-
+defineProps({
+  title: String,
+  text: String,
+  code: String,
+  reverse: {
+    type: Boolean,
+    default: false
+  }
+});
 <\/script>
 <style scoped>
 
