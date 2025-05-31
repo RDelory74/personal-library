@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import {Send} from 'lucide-vue-next'
-import {PhoneOutgoing} from 'lucide-vue-next'
-import {NotebookPen} from 'lucide-vue-next'
-import {Map} from 'lucide-vue-next';
+import { Send } from 'lucide-vue-next'
+import { PhoneOutgoing } from 'lucide-vue-next'
+import { NotebookPen } from 'lucide-vue-next'
+import { Map } from 'lucide-vue-next';
 
 </script>
 
@@ -10,24 +10,15 @@ import {Map} from 'lucide-vue-next';
   <div class="header-cta-band">
     <div class="header-cta-band-contact">
       <div class="header-cta-band-contact-mail">
-        <Send
-            color="#ff4444"
-            :size="20"
-        />
+        <Send color="#ff4444" :size="20" />
         <a href="mailto:rodolphe.delory74@hotmail.com">rodolphe.delory74@hotmail.com</a>
       </div>
       <div class="header-cta-band-contact-phone">
-        <PhoneOutgoing
-            color="#ff4444"
-            :size="20"
-        />
+        <PhoneOutgoing color="#ff4444" :size="20" />
         <a href="tel:0661392013">Tel: 06 61 39 20 13</a>
       </div>
       <div class="header-cta-band-contact-locator">
-        <Map
-            color="#ff4444"
-            :size="20"
-        />
+        <Map color="#ff4444" :size="20" />
         <p>Haute Savoie | Savoie | Ain | Geneve</p>
       </div>
     </div>
@@ -41,17 +32,21 @@ import {Map} from 'lucide-vue-next';
 </template>
 
 <style scoped>
-
 .header-cta-band {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 0 5%;
   font-family: 'Inter', sans-serif;
   color: #D2B48C;
   background-color: #24424A;
   height: 50px;
+  /* css adapté pour la miniature librairie à adapter*/
+  font-size: x-small;
+  padding: 0 1%;
+  /*css desktop 
+  padding 0 5%; 
+  */
 }
 
 .header-cta-band-contact {
@@ -75,6 +70,7 @@ import {Map} from 'lucide-vue-next';
   font-family: 'Inter', sans-serif;
   color: #D2B48C;
 }
+
 .header-cta-band-contact-mail a,
 .header-cta-band-contact-phone a {
   color: inherit;
@@ -91,7 +87,8 @@ import {Map} from 'lucide-vue-next';
   font-family: 'Inter', sans-serif;
   color: #D2B48C;
 }
-.header-cta-band-contact-locator{
+
+.header-cta-band-contact-locator {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -118,8 +115,12 @@ import {Map} from 'lucide-vue-next';
   color: #FEF0C1;
   cursor: pointer;
   transition: transform 0.5s ease, background-color 0.3s ease;
-  padding: 10px 20px;
+  /* css original
+   padding: 10px 20px;
   font-size: 18px;
+  */
+  /*pour la miniature a enlever pour desktop*/
+  padding: 4px 5px;
   border-radius: 2px;
 }
 
@@ -141,9 +142,10 @@ import {Map} from 'lucide-vue-next';
   .header-cta-band-contact-mail {
     display: none;
   }
+
   .header-cta-band-button {
-   padding: 5px 10px;
- }
+    padding: 5px 10px;
+  }
 }
 
 @media (max-width: 800px) {

@@ -37,7 +37,7 @@
     left: 1.25rem;
     font-size: small;
     padding: .25rem;
-    background-color: black;
+    background-color: #1A1A1A;
     z-index: 10;
 }
 .contact__form-div {
