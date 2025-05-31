@@ -171,8 +171,7 @@ export default {
   padding: 30px;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-  font-size: 24px;
-  color: #25424C;
+  color: rgba(250, 236, 214, 1);
 }
 
 .form-grid {
@@ -214,10 +213,10 @@ select:focus {
   border: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  color: inherit;
+  color: black;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.5s ease;
-  font-size: 24px;
+  
   margin-top: 20px;
   display: block;
   margin-left: auto;
