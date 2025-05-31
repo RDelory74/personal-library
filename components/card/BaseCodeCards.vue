@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col justify-center items-center bg-white/10 rounded border border-[#6DA48F] shadow-inner shadow-white/10 p-4 mx-2 flex-1
-    transform transition-transform duration-300 hover:scale-105">
+    transform transition-transform duration-300 hover:scale-101">
     <!-- La tête de la carte -->
     <div class="w-full text-center mb-4">
       <h3 v-if="title" class="text-lg font-semibold text-white">{{ title }}</h3>

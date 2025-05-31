@@ -1,7 +1,7 @@
 
 
 <template>
-  <div class="flex flex-col lg:flex-row justify-center items-center min-h-[50vh] p-6 md:px-60 gap-2 text-white text-center">
+  <div class="flex flex-col lg:flex-row justify-center items-center min-h-[50vh] p-6 lg:px-60 md:px-10 gap-2 text-white text-center">
     <div class="w-full lg:w-1/2 flex justify-center items-center ">
       <Logo />
     </div>

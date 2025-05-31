@@ -69,6 +69,9 @@ header {
 .nav-button {
     gap: 0.5rem;
   }
+  .nav-button > .nav-specific-button:nth-of-type(1) {
+    display: none;
+}
 }
 </style>
 <script setup lang="ts">

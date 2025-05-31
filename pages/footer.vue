@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-2 p-3 my-10 lg:mx-50 w-auto">
+  <div class="flex flex-col gap-2 p-3 my-10 lg:mx-5 w-auto">
 
     <CardBaseCodeCards
         title="Base Footer Css"
