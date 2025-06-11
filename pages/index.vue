@@ -1,4 +1,5 @@
 <template>
+
   <CardBaseCardImgTextRowCol/>
   <CardBaseStaticCardCode
       title="Lucide for Icon"
@@ -27,6 +28,8 @@
 </template>
 
 <script setup>
+
+
 const Code1 =
     `npm install lucide-vue-next`
 const Code2 =

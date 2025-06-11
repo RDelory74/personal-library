@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Send } from 'lucide-vue-next'
-import { PhoneOutgoing } from 'lucide-vue-next'
-import { NotebookPen } from 'lucide-vue-next'
-import { Map } from 'lucide-vue-next';
+import {Send} from 'lucide-vue-next'
+import {PhoneOutgoing} from 'lucide-vue-next'
+import {NotebookPen} from 'lucide-vue-next'
+import {Map} from 'lucide-vue-next';
 
 </script>
 
@@ -10,21 +10,21 @@ import { Map } from 'lucide-vue-next';
   <div class="header-cta-band">
     <div class="header-cta-band-contact">
       <div class="header-cta-band-contact-mail">
-        <Send color="#ff4444" :size="20" />
+        <Send color="#ff4444" :size="20"/>
         <a href="mailto:rodolphe.delory74@hotmail.com">rodolphe.delory74@hotmail.com</a>
       </div>
       <div class="header-cta-band-contact-phone">
-        <PhoneOutgoing color="#ff4444" :size="20" />
+        <PhoneOutgoing color="#ff4444" :size="20"/>
         <a href="tel:0661392013">Tel: 06 61 39 20 13</a>
       </div>
       <div class="header-cta-band-contact-locator">
-        <Map color="#ff4444" :size="20" />
+        <Map color="#ff4444" :size="20"/>
         <p>Haute Savoie | Savoie | Ain | Geneve</p>
       </div>
     </div>
     <div class="header-cta-band-button-container">
       <NuxtLink to="/contact" class="header-cta-band-button">
-        <NotebookPen />
+        <NotebookPen/>
         Un Projet ?
       </NuxtLink>
     </div>
@@ -47,6 +47,8 @@ import { Map } from 'lucide-vue-next';
   /*css desktop 
   padding 0 5%; 
   */
+  /*css pour miniature*/
+  width: 100%;
 }
 
 .header-cta-band-contact {

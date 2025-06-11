@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white px-6 py-12">
+  <footer class="w-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 text-white px-6 py-12">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between gap-10">
 
       <!-- Infos principales -->
@@ -56,7 +56,7 @@
                 id="email"
                 v-model="email"
                 placeholder="ton@email.com"
-                class="w-full px-3 py-2 rounded-l-md text-gray-800 placeholder-gray-400 focus:outline-none"
+                class="w-full px-3 py-2 rounded-l-md text-gray-800 bg-gray-200 placeholder-pink-500 focus:outline-none"
                 required
             />
             <button
