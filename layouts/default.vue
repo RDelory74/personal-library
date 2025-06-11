@@ -5,7 +5,10 @@
     <main class="flex-grow min-h-screen">
       <NuxtPage />
     </main>
-    <FooterAppFooterTwdNuxt/>
+    <EcomerceFooter/>
   </div>
 </template>
 
+<script setup lang="ts">
+import EcomerceFooter from "~/components/footer/EcomerceFooter.vue";
+</script>
